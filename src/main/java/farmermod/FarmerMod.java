@@ -1,8 +1,10 @@
 package farmermod;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
 import farmermod.util.GeneralUtils;
 import farmermod.util.KeywordInfo;
@@ -29,6 +31,7 @@ import java.util.Set;
 
 @SpireInitializer
 public class FarmerMod implements
+        EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -205,6 +208,16 @@ public class FarmerMod implements
     public void receiveEditCharacters() {
 
         BaseMod.addCharacter(new TheFarmer(), CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, TheFarmer.Enums.THE_FARMER);
+
+    }
+
+    @Override
+    public void receiveEditCards() {
+
+        new AutoAdd(modID)
+                .packageFilter(BaseCard.class)
+                .setDefaultSeen(true)
+                .cards();
 
     }
 }
