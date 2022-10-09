@@ -2,12 +2,8 @@
   {
     "PROPER_NAME": "This is displayed in the tooltip.",
     "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
+      "Keyword",
+      "keyword"
     ],
     "DESCRIPTION": "This is displayed in the tooltip. Note, spaces are not allowed in NAMES. For multi-word keywords, see the next one."
   },
@@ -19,5 +15,24 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "Plot",
+    "NAMES": [
+      "plot",
+      "Plot.",
+      "Plot"
+    ],
+    "DESCRIPTION": "Whenever a seed card is played reduce plot by 1. If plot is less than 0 at the end of turn add one Void to the draw pile and set plot to 0."
+  },
+  {
+    "PROPER_NAME": "Seed",
+    "NAMES": [
+      "seed",
+      "Seed.",
+      "Seed"
+    ],
+    "DESCRIPTION": "Whenever you play a seed card, reduce plot by 1."
   }
+
 ]

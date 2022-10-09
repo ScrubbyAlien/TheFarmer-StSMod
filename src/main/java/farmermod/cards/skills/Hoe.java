@@ -1,52 +1,50 @@
-package farmermod.cards.attacks;
+package farmermod.cards.skills;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
+import farmermod.powers.PlotPower;
 import farmermod.util.CardInfo;
 
 import static farmermod.FarmerMod.makeID;
 
-public class Strike extends BaseCard {
+public class Hoe extends BaseCard {
 
     private final static CardInfo cardInfo = new CardInfo(
-            "Strike",
+            "Hoe",
             1, // The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
-            CardType.ATTACK, // ATTACK/SKILL/POWER/CURSE/STATUS
-            CardTarget.ENEMY, // Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
+            CardType.SKILL, // ATTACK/SKILL/POWER/CURSE/STATUS
+            CardTarget.SELF, // Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             CardRarity.BASIC, // BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             TheFarmer.Enums.CARD_COLOR
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int PLOT = 1;
+    private static final int UPG_PLOT = 1;
 
-    public Strike() {
+
+
+    public Hoe() {
         super(cardInfo);
-        tags.add(CardTags.STRIKE);
-        tags.add(CardTags.STARTER_STRIKE);
-        setDamage(DAMAGE, UPG_DAMAGE);
+
+        setMagic(PLOT, UPG_PLOT);
     }
 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
-        ));
+        addToBot(new ApplyPowerAction(p, p, new PlotPower(p, magicNumber), magicNumber));
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Strike();
+        return new Hoe();
     }
+
+
 }

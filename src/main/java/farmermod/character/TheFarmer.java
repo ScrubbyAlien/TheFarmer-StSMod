@@ -22,6 +22,8 @@ import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import farmermod.cards.attacks.Strike;
 import farmermod.cards.skills.Defend;
+import farmermod.cards.skills.Hoe;
+import farmermod.cards.skills.ParsnipSeed;
 
 import java.util.ArrayList;
 
@@ -89,6 +91,8 @@ public class TheFarmer extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
+        retVal.add(Hoe.ID);
+        retVal.add(ParsnipSeed.ID);
 
         return retVal;
     }

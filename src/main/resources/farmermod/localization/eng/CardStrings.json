@@ -16,5 +16,28 @@
   "${modID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! block."
+  },
+  "${modID}:Hoe": {
+    "NAME": "Hoe",
+    "DESCRIPTION": "Gain !M! thefarmer:Plot"
+  },
+  "${modID}:ParsnipSeed": {
+    "NAME": "Parsnip Seed",
+    "DESCRIPTION": "thefarmer:Seed. NL Shuffle a *Parsnip NL into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "thefarmer:Seed. NL Shuffle a *Parsnip+ NL into your draw pile. NL Exhaust."
+  },
+  "${modID}:Parsnip": {
+    "NAME": "Parsnip",
+    "DESCRIPTION": "Gain [E]. NL Shuffle a random common NL seed card into your draw pile. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Suffle a random common NL seed card into your draw pile. NL Draw 2 cards. NL Exhaust."
+  },
+  "${modID}:PotatoSeed": {
+    "NAME": "Potato Seed",
+    "DESCRIPTION": "thefarmer:Seed. NL Shuffle !M! *Potato into your draw pile.",
+    "UPGRADE_DESCRIPTION": "thefarmer:Seed. NL Shuffle !M! *Potato+ into your draw pile."
+  },
+  "${modID}:Potato": {
+    "NAME": "Potato",
+    "DESCRIPTION": "Gain !B! block."
   }
 }

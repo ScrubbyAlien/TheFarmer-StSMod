@@ -4,8 +4,12 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
+import farmermod.patches.FarmerTags;
 import farmermod.util.GeneralUtils;
 import farmermod.util.KeywordInfo;
 import farmermod.util.TextureLoader;
@@ -63,6 +67,9 @@ public class FarmerMod implements
         return modID + ":" + id;
     }
 
+
+    public static CardGroup seedCards;
+
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     @SuppressWarnings("unused")
     public static void initialize() {
@@ -86,6 +93,15 @@ public class FarmerMod implements
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+
+        seedCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+        for (AbstractCard card : CardLibrary.getAllCards()) {
+            if (card.makeCopy().hasTag(FarmerTags.SEED)) {
+                seedCards.addToBottom(card);
+            }
+        }
+
     }
 
     /*----------Localization----------*/
