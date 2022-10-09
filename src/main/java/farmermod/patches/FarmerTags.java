@@ -5,4 +5,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class FarmerTags {
     @SpireEnum public static AbstractCard.CardTags SEED;
+    @SpireEnum public static AbstractCard.CardTags POTATO;
 }

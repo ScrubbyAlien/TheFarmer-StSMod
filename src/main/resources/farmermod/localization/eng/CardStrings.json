@@ -38,6 +38,6 @@
   },
   "${modID}:Potato": {
     "NAME": "Potato",
-    "DESCRIPTION": "Gain !B! block."
+    "DESCRIPTION": "Gain !B! block. NL Gain !M! additional block for each *Potato in your hand. NL Exhaust."
   }
 }

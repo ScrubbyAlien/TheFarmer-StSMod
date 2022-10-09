@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
+import farmermod.patches.FarmerTags;
 import farmermod.util.CardInfo;
 
 import static farmermod.FarmerMod.makeID;
@@ -24,23 +25,35 @@ public class Potato extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     public static final int BLOCK = 6;
+    public static final int MAGIC = 3;
+    public static final int UPG_MAGIC = 1;
 
     public Potato() {
         super(cardInfo);
-
+        tags.add(FarmerTags.POTATO);
         setBlock(BLOCK);
-        // set values
+        setMagic(MAGIC, UPG_MAGIC);
+        setExhaust(true, true);
     }
 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
+        int numberOfPotatoes = 0;
+        for (AbstractCard card : p.hand.group) {
+            if (card.hasTag(FarmerTags.POTATO)) numberOfPotatoes++;
+        }
+        for (int i = 0; i < numberOfPotatoes - 1; i++) { // -1 so we don't count the played card.
+            addToBot(new GainBlockAction(p, p, magicNumber));
+        }
     }
 
     @Override
     public AbstractCard makeCopy() {
         return new Potato();
     }
+
+    // TODO: add extended description so you can see how much block you will actually get.
 
 }

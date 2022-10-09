@@ -27,14 +27,13 @@ public class PotatoSeed extends BaseCard {
 
     // declare static values
 
-    public static final int MAGIC = 2;
-    public static final int UPG_MAGIC = 1;
+    public static final int MAGIC = 3;
 
     public PotatoSeed() {
         super(cardInfo, true);
         tags.add(FarmerTags.SEED);
         cardsToPreview = new Potato();
-        setMagic(MAGIC, UPG_MAGIC);
+        setMagic(MAGIC);
         // set values
     }
 
