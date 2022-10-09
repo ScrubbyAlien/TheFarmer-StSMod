@@ -24,6 +24,7 @@ import farmermod.cards.attacks.Strike;
 import farmermod.cards.skills.Defend;
 import farmermod.cards.skills.Hoe;
 import farmermod.cards.skills.ParsnipSeed;
+import farmermod.relics.farmer.GrandpasFarm;
 
 import java.util.ArrayList;
 
@@ -102,6 +103,7 @@ public class TheFarmer extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
         retVal.add(PrismaticShard.ID);
+        retVal.add(GrandpasFarm.ID);
 
         return retVal;
     }

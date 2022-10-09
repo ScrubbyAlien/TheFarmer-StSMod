@@ -5,5 +5,12 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:GrandpasFarm": {
+    "NAME": "Grandpa's Farm",
+    "FLAVOR": "The Farm left to you by your grandpa after he died.",
+    "DESCRIPTIONS": [
+      "Gain #b%d #ythefarmer:Plot at the start of combat."
+    ]
   }
 }
