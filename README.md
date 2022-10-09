@@ -1,6 +1,3 @@
-This is my first attempt at making a proper mod for Slay the Spire.
+# The Farmer - a Slay the Spire mod
 
-I will attempt to recreate the Farmer from Stardew Valley. 
-This first attempt will probably not be very good. 
-
-You have been warned.
+This mod adds the Farmer from Stardew Valley as a playable character to Slay the Spire.
