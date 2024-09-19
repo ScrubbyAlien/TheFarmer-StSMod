@@ -33,6 +33,15 @@
       "Seed"
     ],
     "DESCRIPTION": "Whenever you play a seed card, reduce plot by 1."
+  },
+  {
+      "PROPER_NAME": "Plant",
+      "NAMES": [
+          "plant",
+          "Plant",
+          "plant."
+      ],
+      "DESCRIPTION": "Shuffle a seed into your draw pile."
   }
 
 ]
