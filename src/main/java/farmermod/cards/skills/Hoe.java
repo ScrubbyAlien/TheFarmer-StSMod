@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
+import farmermod.patches.FarmerTags;
 import farmermod.powers.PlotPower;
 import farmermod.util.CardInfo;
 
@@ -31,8 +32,23 @@ public class Hoe extends BaseCard {
 
     public Hoe() {
         super(cardInfo);
+        tags.add(FarmerTags.TOOL);
+        setMagic(PLOT);
+    }
 
-        setMagic(PLOT, UPG_PLOT);
+    public boolean canUpgrade() {
+        return true;
+    }
+
+    @Override
+    public void upgrade() {
+        if (this.timesUpgraded < 5) {
+            this.upgradeMagicNumber(UPG_PLOT);
+            ++this.timesUpgraded;
+            this.upgraded = true;
+            this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+            this.initializeTitle();
+        }
     }
 
 

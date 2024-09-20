@@ -13,13 +13,17 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:Smallsword": {
+    "NAME": "Smallsword",
+    "DESCRIPTION": "Deal !D! damage."
+  },
   "${modID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! block."
   },
   "${modID}:Hoe": {
     "NAME": "Hoe",
-    "DESCRIPTION": "Gain !M! thefarmer:Plot"
+    "DESCRIPTION": "Gain !M! thefarmer:Plot."
   },
   "${modID}:ParsnipSeed": {
     "NAME": "Parsnip Seed",
