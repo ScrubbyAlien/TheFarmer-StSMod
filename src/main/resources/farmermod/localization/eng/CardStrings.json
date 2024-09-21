@@ -17,6 +17,10 @@
     "NAME": "Smallsword",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:IronEdge": {
+    "NAME": "IronEdge",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
   "${modID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! block."
@@ -25,6 +29,10 @@
     "NAME": "Hoe",
     "DESCRIPTION": "Gain !M! thefarmer:Plot."
   },
+  "${modID}:MilkPail": {
+    "NAME": "MilkPail",
+    "DESCRIPTION": "Gain !B! for every thefarmer:Animal. NL If you have no thefarmer:Animals NL gain 1 thefarmer:Animal."
+  },
   "${modID}:ParsnipSeed": {
     "NAME": "Parsnip Seed",
     "DESCRIPTION": "thefarmer:Seed. NL thefarmer:Plant a *Parsnip. NL Exhaust.",
@@ -32,8 +40,8 @@
   },
   "${modID}:Parsnip": {
     "NAME": "Parsnip",
-    "DESCRIPTION": "Gain [E]. NL thefarmer:Plant a common thefarmer:Seed. NL Draw 1 card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E].NL thefarmer:Plant a common thefarmer:seed. NL Draw 2 cards. NL Exhaust."
+    "DESCRIPTION": "Gain [E]. Add a thefarmer:Seed to your draw pile. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E].NL Add a thefarmer:seed to your draw pile. NL Draw 2 cards. NL Exhaust."
   },
   "${modID}:PotatoSeed": {
     "NAME": "Potato Seed",

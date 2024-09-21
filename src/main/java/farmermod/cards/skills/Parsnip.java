@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import farmermod.cards.BaseCard;
 import farmermod.character.TheFarmer;
+import farmermod.patches.FarmerTags;
 import farmermod.util.CardInfo;
 
 import static farmermod.FarmerMod.seedCards;
@@ -31,7 +32,7 @@ public class Parsnip extends BaseCard {
 
     public Parsnip() {
         super(cardInfo);
-
+        tags.add(FarmerTags.CROP);
         setMagic(MAGIC, UPG_MAGIC);
         setExhaust(true, true);
     }
@@ -41,8 +42,8 @@ public class Parsnip extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainEnergyAction(magicNumber));
 
-        // shuffle a random common seed card into the draw pile
-        AbstractCard randomCommonSeedCard = seedCards.getRandomCard(true, CardRarity.COMMON);
+        // shuffle a random seed card into the draw pile
+        AbstractCard randomCommonSeedCard = seedCards.getRandomCard(true);
         addToBot(new MakeTempCardInDrawPileAction(randomCommonSeedCard, 1, true, true));
 
         addToBot(new DrawCardAction(magicNumber));

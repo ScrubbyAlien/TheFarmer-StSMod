@@ -42,6 +42,18 @@
           "plant."
       ],
       "DESCRIPTION": "Shuffle a seed into your draw pile."
+  },
+  {
+      "PROPER_NAME": "Animal",
+      "NAMES": [
+          "animal",
+          "Animal",
+          "animal.",
+          "animals",
+          "Animals",
+          "animals."
+      ],
+      "DESCRIPTION": "The cows, chickens, sheep, and pigs in your farm. If you have more animals than your maximum energy at the end of your turn you lose HP equal to the number of animals exceeding your max energy."
   }
 
 ]

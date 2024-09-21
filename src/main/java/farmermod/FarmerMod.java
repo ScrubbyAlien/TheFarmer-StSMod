@@ -71,7 +71,6 @@ public class FarmerMod implements
     }
 
 
-    public static CardGroup seedCards;
 
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     @SuppressWarnings("unused")
@@ -86,8 +85,11 @@ public class FarmerMod implements
 
     public FarmerMod() {
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
-        logger.info(modID + " subscribed to BaseMod.");
+        logger.info("{} subscribed to BaseMod.", modID);
     }
+
+    public static CardGroup seedCards;
+    public static CardGroup villagerCards;
 
     @Override
     public void receivePostInitialize() {
@@ -98,6 +100,7 @@ public class FarmerMod implements
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
 
         seedCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        villagerCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
         for (AbstractCard card : CardLibrary.getAllCards()) {
             if (card.makeCopy().hasTag(FarmerTags.SEED)) {
@@ -116,6 +119,7 @@ public class FarmerMod implements
     }
     private static final String defaultLanguage = "eng";
 
+    @SuppressWarnings("CallToPrintStackTrace")
     @Override
     public void receiveEditStrings() {
         /*
@@ -177,7 +181,7 @@ public class FarmerMod implements
             }
             catch (Exception e)
             {
-                logger.warn(modID + " does not support " + getLangString() + " keywords.");
+                logger.warn("{} does not support {} keywords.", modID, getLangString());
             }
         }
     }
@@ -206,6 +210,7 @@ public class FarmerMod implements
 
 
     //This determines the mod's ID based on information stored by ModTheSpire.
+    @SuppressWarnings("UrlHashCode")
     private static void loadModInfo() {
         Optional<ModInfo> infos = Arrays.stream(Loader.MODINFOS).filter((modInfo)->{
             AnnotationDB annotationDB = Patcher.annotationDBMap.get(modInfo.jarURL);

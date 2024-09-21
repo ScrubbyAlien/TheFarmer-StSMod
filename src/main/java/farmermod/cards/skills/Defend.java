@@ -28,7 +28,6 @@ public class Defend extends BaseCard {
 
     public Defend() {
         super(cardInfo);
-
         setBlock(BLOCK, UPG_BLOCK);
     }
 
