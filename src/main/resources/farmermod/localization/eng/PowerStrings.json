@@ -11,5 +11,14 @@
       "You have #b",
       " #yPlot. Every time you play a seed card plot is reduced by 1. NL If plot is less than zero at the end of turn add a Void to the draw pile and set plot to 0. "
     ]
-  }
+  },
+  "${modID}:Animal": {
+      "NAME": "Animal",
+      "DESCRIPTIONS": [
+        "You have #b",
+        " #yAnimal. If you have more animals at the end of your turn than you have NL maximum energy lose HP equal to the difference.",
+        " #yAnimals. If you have more animals at the end of your turn than you have NL maximum energy lose HP equal to the difference."
+      ]
+    }
+
 }

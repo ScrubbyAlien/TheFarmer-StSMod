@@ -28,7 +28,7 @@ public class PlotPower extends BasePower  {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (this.amount < 0) {
+        if (this.amount < 0 && isPlayer) {
             this.flash();
             this.addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
             this.amount = 0;
