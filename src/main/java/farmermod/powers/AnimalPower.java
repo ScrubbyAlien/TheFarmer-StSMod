@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import static farmermod.FarmerMod.makeID;
 
 public class AnimalPower extends BasePower {
-    public static final String POWER_ID = makeID("Animal");
+    public static final String POWER_ID = makeID("AnimalPower");
     private static final PowerType TYPE = PowerType.BUFF; // Not technically, but shouldn't be removed by orange pellets.
     private static final boolean TURN_BASED = false;
     private static final boolean CAN_GO_NEGATIVE = false;

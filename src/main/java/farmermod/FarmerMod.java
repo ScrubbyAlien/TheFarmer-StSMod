@@ -106,6 +106,9 @@ public class FarmerMod implements
             if (card.makeCopy().hasTag(FarmerTags.SEED)) {
                 seedCards.addToBottom(card);
             }
+            if (card.makeCopy().hasTag(FarmerTags.VILLAGER)) {
+                villagerCards.addToBottom(card);
+            }
         }
 
     }

@@ -5,20 +5,26 @@
       "You are Very Cool and Strong."
     ]
   },
-  "${modID}:Plot": {
+  "${modID}:PlotPower": {
     "NAME": "Plot",
     "DESCRIPTIONS": [
       "You have #b",
       " #yPlot. Every time you play a seed card plot is reduced by 1. NL If plot is less than zero at the end of turn add a Void to the draw pile and set plot to 0. "
     ]
   },
-  "${modID}:Animal": {
+  "${modID}:AnimalPower": {
       "NAME": "Animal",
       "DESCRIPTIONS": [
         "You have #b",
-        " #yAnimal. If you have more animals at the end of your turn than you have NL maximum energy lose HP equal to the difference.",
-        " #yAnimals. If you have more animals at the end of your turn than you have NL maximum energy lose HP equal to the difference."
+        " #yAnimal. If you have more animals at the end of your turn than you have maximum energy lose HP equal to the difference.",
+        " #yAnimals. If you have more animals at the end of your turn than you have maximum energy lose HP equal to the difference."
       ]
-    }
+  },
+  "${modID}:ClintPower": {
+      "NAME": "Clint",
+      "DESCRIPTIONS": [
+        "Whenever you draw a #yTool, upgrade it. NL #yTools cannot be upgraded beyond +5."
+      ]
+  }
 
 }

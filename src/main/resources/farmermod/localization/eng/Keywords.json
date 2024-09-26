@@ -54,6 +54,24 @@
           "animals."
       ],
       "DESCRIPTION": "The cows, chickens, sheep, and pigs in your farm. If you have more animals than your maximum energy at the end of your turn you lose HP equal to the number of animals exceeding your max energy."
+  },
+  {
+      "PROPER_NAME": "Villager",
+      "NAMES": [
+          "Villager",
+          "villager.",
+          "villager"
+      ],
+      "DESCRIPTION": "The people of pelican town are here to help you out."
+  },
+  {
+      "PROPER_NAME": "Tool",
+      "NAMES": [
+          "Tool",
+          "tool",
+          "tool."
+      ],
+      "DESCRIPTION": "Tools can upgrade up to +5."
   }
 
 ]

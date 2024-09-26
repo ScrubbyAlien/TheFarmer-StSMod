@@ -8,4 +8,6 @@ public class FarmerTags {
     @SpireEnum public static AbstractCard.CardTags POTATO;
     @SpireEnum public static AbstractCard.CardTags TOOL;
     @SpireEnum public static AbstractCard.CardTags CROP;
+    @SpireEnum public static AbstractCard.CardTags VILLAGER;
+
 }
